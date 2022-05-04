@@ -30,25 +30,7 @@ var db = new sqlite3.Database('./database/mydb.db');
     return responseApi;
   };
   
-  // function updateRow (table, rb, cb) {
-  //   var pairs = "";
-  //   for (field of schema[table].slice(1)) {
-  //       if (pairs) pairs += ", ";
-  //       pairs += `${field} = '${escape(rb[field])}'`;
-  //   }
-  //   let sql = `UPDATE ${table} SET ${pairs} WHERE id = ?`;
-  //   db.run(sql, rb['id'], cb);
-  // };
-  
-  // function deleteRow (table, id, cb) {
-  //   let sql = `DELETE FROM ${table} WHERE id = ${id};`;
-  //   db.run(sql, cb);
-  // };
-  
   module.exports = {
-    // readTable,
     createRow,
     selectRow
-    // updateRow,
-    // deleteRow
   }
